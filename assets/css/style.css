@@ -1,0 +1,130 @@
+.navbar-brand {
+	font-weight: bold;
+}
+
+.navbar-brand {
+  display: inline-block;
+}
+
+h1,p {
+	color: #ffffff;
+}
+
+.animation-box {
+	display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.animation-box:hover {
+  animation: pulse 1s;
+  animation-fill-mode: both;
+}
+
+.gem {
+  justify-self: center;
+}
+
+.logo {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 auto 2rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin3 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(1080deg); /* 3 x 360 = 1080 */
+  }
+}
+
+.logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  animation: spin3 2s ease-out 1;
+}
+
+@keyframes spin3 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    filter: drop-shadow(0 0 0px gold);
+  }
+  50% {
+    filter: drop-shadow(0 0 0px gold) drop-shadow(0 0 20px white);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(1080deg);
+  }
+}
+
+.glitter-wrapper {
+  filter: drop-shadow(0 0 10px gold);
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin: 0 auto 2rem auto;
+  overflow: visible;
+}
+
+.glitter-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.glitter-wrapper:hover img {
+  animation: spin3 2s ease-out 1;
+}
+
+.major {
+  color: white;
+}
+
+#main > article {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#main.visible > article.active {
+  display: block;
+  opacity: 1;
+}
+
+body.is-article-visible .navbar-toggler {
+  display: none !important;
+}
+
+textarea, input[type="text"], input[type="email"] {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
